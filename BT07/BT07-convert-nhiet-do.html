@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Bạn nhập vào nhiệt độ C cần đổi </p>
+    <p>Nhiệt độc C: <input type="text" id="nhietDoC" value="" /></p>
+    <input type="button" id="buttonConvert" value="Chuyển đổi" /><br><br>
+    <!-- Thong bao in ra màn hình  -->
+    Nhiệt độ C[<span id="chuyenNhietDo" style="color: red;"></span>] = Nhiệt độ F [<span id="nhietDoF" style="color: red;"></span>]
+    <script>
+        let nhietdoC = document.getElementById('buttonConvert');
+        nhietdoC.addEventListener('click', function () {
+            let C = document.getElementById('nhietDoC').value;
+            let C2F = (Number(C) * 9 / 5 + 32);
+            // In ra gia tri do C
+            let doC = document.getElementById('chuyenNhietDo');
+            doC.innerText = C;
+            // In ra gia tri do F
+            let doF = document.getElementById('nhietDoF');
+            doF.innerText = C2F;
+
+            //alert(C2F);
+        })
+    </script>
+</body>
+
+</html>
