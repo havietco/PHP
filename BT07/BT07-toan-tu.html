@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Bạn nhập điểm 3 môn vào input bên dưới</p>
+    <p>Điểm Vật Lý <input type="number" id="diemVatLy" value="diemVatLy"></p>
+    <p>Điểm Hóa Học <input type="number" id="diemHoaHoc" value="diemHoaHoc"></p>
+    <p>Điểm Sinh Học<input type="number" id="diemSinhHoc" value="diemSinhHoc"></p>
+
+    <input type="button" id="diemTrungBinh" value="Điểm Trung Bình" />
+    <input type="button" id="tongDiemMon" value="Tổng Điểm" /> <br> <br>
+
+    Điểm trung bình của Bạn:  <span id="kqDTB" style="color: red;"></span> - Điểm tổng của Bạn :    <span id="tongDiemBaMon" style="color: red;"></span>
+
+
+    <script>
+        let diemVatLy = document.getElementById('diemVatLy').value;
+        let diemHoaHoc = document.getElementById('diemHoaHoc').value;
+        let diemSinhHoc = document.getElementById('diemSinhHoc').value;
+
+        let tongDiemTrungBinh = document.getElementById('diemTrungBinh');
+            tongDiemTrungBinh.addEventListener('click', function () {
+            let diemTB = (Number(diemVatLy) + Number(diemHoaHoc) + Number(diemSinhHoc)) / 3
+            let kqDTB = document.getElementById('kqDTB');
+                kqDTB.innerText = diemTB;
+        });
+
+        let tongDiem = document.getElementById('tongDiemMon');
+            tongDiemMon.addEventListener('click', function(){
+                let tongDiem3Mon = Number(diemVatLy) + Number(diemHoaHoc) + Number(diemSinhHoc)
+        let tongDiemBaMon = document.getElementById('tongDiemBaMon');
+                tongDiemBaMon.innerText = tongDiem3Mon;
+            });
+        
+    </script>
+</body>
+
+</html>
