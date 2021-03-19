@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+
+<body>
+    <div>
+        <h3>Tính chu vi - diện tích hình tròn</h3>
+        <p>Nhập bán kính hình tròn: <input type="number" id="nhapBanKinh" placeholder="nhapBanKinh" value="0" onkeyup="tinhToan()"/></p>
+       
+        <!-- onkeyup="tan()" using for javascript-->
+        <p>Chu vi hình tròn là: <span id="circumference"></span></p>
+        <br />
+        <p>Diện tích hình tròn là: <span id="acreage"></span></p>
+    </div>
+    <script type="text/javascript"> //JAVASCRIPT
+        function tinhToan() {
+            var banKinh = document.getElementById("nhapBanKinh").value;
+            var dienTich = 2 * 3.14 * banKinh;
+            document.getElementById("circumference").innerText = dienTich;
+
+            var chuVi = 3.14 * banKinh * banKinh;
+            document.getElementById('acreage').innerText = chuVi;
+        }
+
+    </script>
+</body>
+
+</html>
