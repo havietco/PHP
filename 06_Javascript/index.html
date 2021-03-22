@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <Script src="./main.js"></Script>
+	<title>Bài tập ôn luyện Function - Lập trình Javascript</title>
+	<meta charset="utf-8">
 </head>
 <body>
-    
+	<h2>Ôn luyện Function</h2>
+	<script type="text/javascript">
+		var a,b
+		function nhapa(){
+			a = Number(('Nhập giá trị a:'))	}
+		function nhapb(){	
+			b = parseInt(prompt('Nhập giá trị b:')) }
+		function phepcong() {
+			document.write('KetQua: ' + (a + b))
+		}
+		function pheptru() {
+			document.write('KetQua: ' + (a - b))
+		}
+		function phepnhan() {;
+			document.write('KetQua: ' + (a * b))
+		}
+		function phepchia() {
+			document.write('KetQua: ' + (a / b))
+		}
+	</script>
+	<div style="padding: 5px">
+		<button onclick="nhapa()">Nhập giá trị A</button><br>
+		<button onclick="nhapb()">Nhập giá trị B</button><br>
+	</div>
+	<div style="padding: 5px">
+		<button style="line-height: 1.5" onclick="phepcong()">Kết quả Cộng</button><br>
+		<button style="line-height: 1.5" onclick="pheptru()">Kết quả Trừ</button><br>
+		<button style="line-height: 1.5" onclick="phepnhan()">Kết quả Nhân</button><br>
+		<button style="line-height: 1.5" onclick="phepchia()">Kết quả Chia</button><br>
+	</div>
 </body>
 </html>

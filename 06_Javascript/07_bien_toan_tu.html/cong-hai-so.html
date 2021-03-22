@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nhap vao so A: <input type="number" id="soA" value="soA" /></p>
+    <p>Nhap vao so B: <input type="number" id="soB" value="soB" /></p>
+
+    <input type="button" id="cong" value="Cong">
+    <input type="button" id="tru" value="Tru">
+    <input type="button" id="nhan" value="Nhan">
+    <input type="button" id="chia" value="Chia">
+
+    <script>
+
+        let buttonCong = document.getElementById('cong');
+        buttonCong.addEventListener('click', function () {
+            let giaTriSoA = document.getElementById('soA').value;
+            let giaTriSoB = document.getElementById('soB').value; 
+            //let tinhTong = parseInt(giaTriSoA) + parseInt(giaTriSoB);
+            let tinhTong = Number(giaTriSoA) + Number(giaTriSoB);
+            alert('Phep cong 2 so: ' + tinhTong);
+        })
+        
+        let buttonTru = document.getElementById('tru');
+        buttonTru.addEventListener('click', function () {
+            let giaTriSoA = document.getElementById('soA').value;
+            let giaTriSoB = document.getElementById('soB').value; 
+            //let tinhTong = parseInt(giaTriSoA) + parseInt(giaTriSoB);
+            let tinhTru = Number(giaTriSoA) - Number(giaTriSoB);
+            alert('Phep tru 2 so: ' + tinhTru) ;
+        })
+
+        let buttonNhan = document.getElementById('nhan');
+        buttonNhan.addEventListener('click', function () {
+            let giaTriSoA = document.getElementById('soA').value;
+            let giaTriSoB = document.getElementById('soB').value; 
+            //let tinhTong = parseInt(giaTriSoA) + parseInt(giaTriSoB);
+            let tinhNhan = Number(giaTriSoA) * Number(giaTriSoB);
+            alert('Phep tru 2 so: ' + tinhNhan) ;
+
+        })
+        let buttonChia = document.getElementById('chia');
+        buttonChia.addEventListener('click', function () {
+            let giaTriSoA = document.getElementById('soA').value;
+            let giaTriSoB = document.getElementById('soB').value; 
+            //let tinhTong = parseInt(giaTriSoA) + parseInt(giaTriSoB);
+            let tinhChia = Number(giaTriSoA) / Number(giaTriSoB);
+            alert('Phep tru 2 so: ' + tinhChia) ;
+        })
+</script>
+</body>
+
+</html>

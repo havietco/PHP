@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="soThuNhat" />  <input type="number" id="soThuHai" /><br><br>
+    <input type="button" id="id_cong" value="Addition(+)"> <input type="button" id="id_tru" value="Subtraction(-)"> <input type="button" id="id_nhan" value="Multiplicaption(X)"> <input type="button" id="id_chia" value="Division(+/"><br><br>
+    
+    <p>Phép tính của bạn là: <span id="ket_qua" style="color: red; font-weight: bold;"></span></p>
+    <script>
+        let SoA = document.getElementById('soThuNhat').value;
+        let SoB = document.getElementById('soThuHai').value;
+
+        let tinhTong = document.getElementById('id_cong');
+        tinhTong.addEventListener('click', function(){
+            let phepTong = Number(SoA) + Number(SoB);
+            //alert(phepTong);
+        let kq = document.getElementById('ket_qua');
+        kq.innerHTML = phepTong;
+        });
+
+        let tinhTru = document.getElementById('id_tru');
+        tinhTru.addEventListener('click', function(){
+            let phepTru = Number(SoA) - Number(SoB);
+           // alert(phepTru);
+        let kq = document.getElementById('ket_qua');
+        kq.innerHTML = phepTru;
+        });
+
+        let tinhNhan = document.getElementById('id_nhan');
+        tinhNhan.addEventListener('click', function(){
+            let phepNhan = Number(SoA) * Number(SoB);
+           // alert(phepNhan);
+        let kq = document.getElementById('ket_qua');
+        kq.innerHTML = phepNhan;
+        });
+
+        let tinhChia = document.getElementById('id_chia');
+        tinhChia.addEventListener('click', function(){
+            let phepChia = Number(SoA) / Number(SoB);
+           // alert(phepChia);
+        let kq = document.getElementById('ket_qua');
+        kq.innerHTML = phepChia;
+        });
+    </script>
+</body>
+</html>

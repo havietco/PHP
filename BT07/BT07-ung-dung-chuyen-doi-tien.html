@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td, th {
+            width: 4000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bảng chuyển đổi tiền tệ </h1>
+    <table>
+        <tr>
+            <td><span id="id_nhapTien">Amount</span></td>
+            <td><span id="id_loaiTien">From Currency</span></td>
+            <td><span id="id_giaTriTien">To Currency</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="id_numberTien" /></td>
+            <td><select name="" id="id_select">
+                <option value="VNĐ" id="id_vietnamdong">VietNamDong</option>
+                <option value="USD" id="dola">Dolas</option>
+            </select></td>
+            <td><select name="" id="id_giaTriTien">
+                <option value="vn" >VND</option>
+                <option value="usd" >USD</option>
+            </select></td>
+            <td><input type="button" id="id_button" value="Convert"></td>
+        </tr>
+    </table>
+
+    <h3>Số tiền bạn chuyển đổi: <span id="thanhTien"></span> USD</h3>
+    <!-- Hàm xử lý chuyển đổi tiền tệ  -->
+    <script>
+        let button = document.getElementById('id_button');
+        button.addEventListener('click', function(){
+            let number = document.getElementById('id_numberTien').value;
+            let chuyenDoi = Number(number) / 23000;
+            let convert = document.getElementById('thanhTien');
+            convert.innerHTML = chuyenDoi;
+        });
+        
+       let   
+        
+    </script>
+</body>
+</html>
