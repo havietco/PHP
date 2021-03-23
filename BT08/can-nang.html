@@ -16,13 +16,14 @@
 
     <p> Kết quả của bạn : <span id="ketQua" style="color: red;"></span></p>
     <script>
-        
 
-        let xemChiSo = document.getElementById('id_xemChiSo');
-        xemChiSo.addEventListener('click', function () {
+            let xemChiSo = document.getElementById('id_xemChiSo');
+            xemChiSo.addEventListener('click', function () {
+
             let canNang = document.getElementById('id_canNang').value;
-        let chieuCao = document.getElementById('id_chieuCao').value;
-            let bmi = Number(canNang) / (Number(chieuCao) * Number(chieuCao) );
+            let chieuCao = document.getElementById('id_chieuCao').value;
+            
+            let bmi = Number(canNang) / (Number(chieuCao) * Number(chieuCao));
             console.log(bmi);
 
             if (bmi < 18.5) {

@@ -9,33 +9,39 @@
 </head>
 
 <body>
-    <script>
-        let thang = 5;
-        if (thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
-            document.write('thang' + thang + 'có 31 ngày ');
-        } else if (thang == 2) {
-            document.write('thang' + thang + 'có 28 ngày ');
-        } else {
-            document.write('Tháng ' + thang + 'có 30 ngày ');
-        }
+    <input type="text" id="id_thang" /> <input type="button" id="id_button" value="Tính ngày" />
 
-        switch (thang) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                document.write('thang' + thang + 'có 31 ngày ');
-                break;
-            case 2:
-                document.write('thang' + thang + 'có 28 ngày ');
-                break;
-            default:
-                document.write('Tháng ' + thang + 'có 30 ngày ');
-                break
-        }
+    <p>Kết quả : <span id="ket_qua" style="color: red; font-weight: bold;"></span></p>
+    <script>
+
+            var tinhNgay = document.getElementById('id_button');
+            tinhNgay.addEventListener('click', function () {
+
+            var thang = document.getElementById('id_thang').value;
+                thang = parseInt(thang);
+            switch (thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    var kq = document.getElementById('ket_qua');
+                    kq.innerHTML = 'Tháng ' + thang + ' có 31 ngày';
+                    break;
+                case 2:
+                    var kq = document.getElementById('ket_qua');
+                    kq.innerHTML = 'Tháng ' + thang + ' có 28 ngày'
+                    break;
+                default:
+                    var kq = document.getElementById('ket_qua');
+                    kq.innerHTML = 'Tháng ' + thang + ' có 30 ngày'
+                    break
+            }
+        });
+
+
     </script>
 </body>
 
