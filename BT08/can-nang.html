@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bạn nhập cân nặng: <input type="text" id="id_canNang" value="" /><br>
+    Bạn nhập chiều cao: <input type="text" id="id_chieuCao" value="" /> <br>
+
+    <input type="button" id="id_xemChiSo" value="Xem chỉ số">
+
+    <p> Kết quả của bạn : <span id="ketQua" style="color: red;"></span></p>
+    <script>
+        
+
+        let xemChiSo = document.getElementById('id_xemChiSo');
+        xemChiSo.addEventListener('click', function () {
+            let canNang = document.getElementById('id_canNang').value;
+        let chieuCao = document.getElementById('id_chieuCao').value;
+            let bmi = Number(canNang) / (Number(chieuCao) * Number(chieuCao) );
+            console.log(bmi);
+
+            if (bmi < 18.5) {
+                let kq = document.getElementById('ketQua');
+                kq.innerHTML = 'Underweight: Bạn không bình thường';
+
+            } else if (bmi < 25.0) {
+                let kq = document.getElementById('ketQua');
+                kq.innerHTML = 'Normal: Bình thường';
+
+            } else if (bmi < 30.0) {
+                let kq = document.getElementById('ketQua');
+                kq.innerHTML = 'Overweight: Quá tốt';
+
+            } else {
+                let kq = document.getElementById('ketQua');
+                kq.innerHTML = 'Obese: Béo phì rồi đó nha';
+
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
